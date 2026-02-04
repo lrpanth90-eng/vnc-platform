@@ -7,6 +7,7 @@ export class ZeroTrustGuard implements CanActivate {
 
     if (!req.headers['x-device-id']) return false;
     if (!req.headers['x-client-signature']) return false;
+    if (!req.user) return false;
 
     return true;
   }
