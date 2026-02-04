@@ -5,6 +5,7 @@ import { AuditModule } from './modules/audit/audit.module';
 import { DbModule } from './modules/db/db.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { OtpModule } from './modules/otp/otp.module';
+import { WalletModule } from './modules/wallet/wallet.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { OtpModule } from './modules/otp/otp.module';
     AuditModule,
     AuthModule,
     OtpModule,
+    WalletModule,
     HealthModule
   ]
 })
