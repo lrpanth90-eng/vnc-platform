@@ -6,12 +6,14 @@ import {
 } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { AuthService } from '../modules/auth/auth.service';
+import { FraudService } from '../modules/fraud/fraud.service';
 
 @Injectable()
 export class JwtGuard implements CanActivate {
   constructor(
     private readonly jwt: JwtService,
-    private readonly auth: AuthService
+    private readonly auth: AuthService,
+    private readonly fraud: FraudService
   ) {}
 
   async canActivate(context: ExecutionContext): Promise<boolean> {
@@ -21,10 +23,13 @@ export class JwtGuard implements CanActivate {
     if (!authHeader) throw new UnauthorizedException();
 
     const token = authHeader.replace('Bearer ', '');
-
     const payload = this.jwt.verify(token);
 
     await this.auth.validateToken(payload);
+
+    if (await this.fraud.isFrozen(payload.userId)) {
+      throw new UnauthorizedException('Account frozen');
+    }
 
     req.user = payload;
     return true;
