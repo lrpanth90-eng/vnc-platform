@@ -7,6 +7,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { OtpModule } from './modules/otp/otp.module';
 import { WalletModule } from './modules/wallet/wallet.module';
 import { MiningModule } from './modules/mining/mining.module';
+import { AdsModule } from './modules/ads/ads.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { MiningModule } from './modules/mining/mining.module';
     OtpModule,
     WalletModule,
     MiningModule,
+    AdsModule,
     HealthModule
   ]
 })
