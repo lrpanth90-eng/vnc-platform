@@ -13,6 +13,7 @@ import { MerchantModule } from './modules/merchant/merchant.module';
 import { EscrowModule } from './modules/escrow/escrow.module';
 import { BlockchainModule } from './modules/blockchain/blockchain.module';
 import { FraudModule } from './modules/fraud/fraud.module';
+import { ComplianceModule } from './modules/compliance/compliance.module';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { FraudModule } from './modules/fraud/fraud.module';
     EscrowModule,
     BlockchainModule,
     FraudModule,
+    ComplianceModule,
     HealthModule
   ]
 })
