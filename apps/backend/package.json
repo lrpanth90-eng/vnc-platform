@@ -2,11 +2,12 @@
   "name": "vnc-backend",
   "version": "6.7.1.1",
   "private": true,
-  "scripts": {
-    "start": "nest start",
-    "start:prod": "node dist/main.js",
-    "build": "nest build"
-  },
+"scripts": {
+  "build": "npm install && npm run build:nest",
+  "build:nest": "nest build",
+  "start": "nest start",
+  "start:prod": "node dist/main.js"
+},
   "dependencies": {
     "@nestjs/common": "^10.3.0",
     "@nestjs/core": "^10.3.0",
