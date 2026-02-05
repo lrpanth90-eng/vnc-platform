@@ -14,6 +14,7 @@ import { EscrowModule } from './modules/escrow/escrow.module';
 import { BlockchainModule } from './modules/blockchain/blockchain.module';
 import { FraudModule } from './modules/fraud/fraud.module';
 import { ComplianceModule } from './modules/compliance/compliance.module';
+import { OwnerModule } from './modules/owner/owner.module';
 
 @Module({
   imports: [
@@ -31,6 +32,7 @@ import { ComplianceModule } from './modules/compliance/compliance.module';
     BlockchainModule,
     FraudModule,
     ComplianceModule,
+    OwnerModule,
     HealthModule
   ]
 })
