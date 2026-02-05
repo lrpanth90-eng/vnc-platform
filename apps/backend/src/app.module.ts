@@ -10,6 +10,7 @@ import { MiningModule } from './modules/mining/mining.module';
 import { AdsModule } from './modules/ads/ads.module';
 import { TradeModule } from './modules/trade/trade.module';
 import { MerchantModule } from './modules/merchant/merchant.module';
+import { EscrowModule } from './modules/escrow/escrow.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { MerchantModule } from './modules/merchant/merchant.module';
     AdsModule,
     TradeModule,
     MerchantModule,
+    EscrowModule,
     HealthModule
   ]
 })
