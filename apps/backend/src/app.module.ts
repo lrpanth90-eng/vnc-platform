@@ -11,6 +11,7 @@ import { AdsModule } from './modules/ads/ads.module';
 import { TradeModule } from './modules/trade/trade.module';
 import { MerchantModule } from './modules/merchant/merchant.module';
 import { EscrowModule } from './modules/escrow/escrow.module';
+import { BlockchainModule } from './modules/blockchain/blockchain.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { EscrowModule } from './modules/escrow/escrow.module';
     TradeModule,
     MerchantModule,
     EscrowModule,
+    BlockchainModule,
     HealthModule
   ]
 })
